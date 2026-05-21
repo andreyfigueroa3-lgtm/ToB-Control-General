@@ -51,6 +51,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
 
+      // Guardar credenciales temporalmente para el Perfil
+      localStorage.setItem('tob_user_email', email);
+      localStorage.setItem('tob_user_password', password);
+
       // auth.js detectará el SIGNED_IN o redirigimos manualmente
       window.location.replace('index.html');
 
