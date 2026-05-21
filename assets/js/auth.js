@@ -128,16 +128,16 @@ function injectProfileButton() {
   const email = localStorage.getItem('tob_user_email') || 'coordinador@tob.com';
   const password = localStorage.getItem('tob_user_password') || '********';
 
-  profilePopup.innerHTML = \`
+  profilePopup.innerHTML = `
     <div style="font-size: 14px; font-weight: 600; color: #fff; margin-bottom: 4px;">Mis Credenciales</div>
     <div style="display: flex; flex-direction: column; gap: 4px;">
       <label style="font-size: 11px; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.5px;">Correo</label>
-      <div style="font-size: 13px; color: #fff; background: rgba(0,0,0,0.2); padding: 8px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.05); word-break: break-all;">\${email}</div>
+      <div style="font-size: 13px; color: #fff; background: rgba(0,0,0,0.2); padding: 8px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.05); word-break: break-all;">${email}</div>
     </div>
     <div style="display: flex; flex-direction: column; gap: 4px;">
       <label style="font-size: 11px; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.5px;">Contraseña</label>
       <div style="display: flex; align-items: center; background: rgba(0,0,0,0.2); border-radius: 4px; border: 1px solid rgba(255,255,255,0.05);">
-        <input type="password" id="profile-password-input" value="\${password}" readonly style="flex: 1; background: transparent; border: none; color: #fff; padding: 8px; font-size: 13px; font-family: 'Inter', sans-serif; outline: none; width: 100%;">
+        <input type="password" id="profile-password-input" value="${password}" readonly style="flex: 1; background: transparent; border: none; color: #fff; padding: 8px; font-size: 13px; font-family: 'Inter', sans-serif; outline: none; width: 100%;">
         <button id="btn-toggle-password" style="background: none; border: none; color: var(--text-secondary); padding: 0 10px; cursor: pointer; display: flex; align-items: center; justify-content: center; height: 100%;">
           <span aria-hidden="true" style="font-size: 14px;">👁️</span>
         </button>
@@ -146,7 +146,7 @@ function injectProfileButton() {
     <button id="btn-logout" style="margin-top: 8px; background: rgba(255, 69, 58, 0.1); border: 1px solid rgba(255, 69, 58, 0.2); color: #ff453a; padding: 8px; border-radius: 6px; font-size: 13px; font-weight: 500; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; transition: all 0.2s ease;">
       Cerrar Sesión <span aria-hidden="true">🚪</span>
     </button>
-  \`;
+  `;
 
   wrapper.appendChild(profileBtn);
   wrapper.appendChild(profilePopup);
